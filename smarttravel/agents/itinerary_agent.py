@@ -10,6 +10,9 @@ from datetime import datetime, timedelta
 
 logger = logging.getLogger(__name__)
 
+# Default number of attractions to schedule per day when no attractions provided
+DEFAULT_ATTRACTIONS_PER_DAY = 2
+
 
 @dataclass
 class DayPlan:
@@ -78,7 +81,11 @@ class ItineraryAgent:
         # Generate day plans
         days = []
         attractions_list = attractions or []
-        attractions_per_day = max(1, len(attractions_list) // num_days) if attractions_list else 2
+        attractions_per_day = (
+            max(1, len(attractions_list) // num_days) 
+            if attractions_list 
+            else DEFAULT_ATTRACTIONS_PER_DAY
+        )
         
         for i in range(num_days):
             current_date = start + timedelta(days=i)
