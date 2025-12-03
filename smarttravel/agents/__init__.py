@@ -7,6 +7,7 @@ This package contains various specialized agents for travel planning:
 - AttractionAgent: Local attractions and activities
 - ItineraryAgent: Trip planning and scheduling
 - RestaurantAgent: Dining and restaurant recommendations
+- WeatherAgent: Weather forecasts and climate insights
 """
 
 from .concierge import TravelConcierge
@@ -15,6 +16,7 @@ from .hotel_agent import HotelAgent
 from .attraction_agent import AttractionAgent
 from .itinerary_agent import ItineraryAgent
 from .restaurant_agent import RestaurantAgent
+from .weather_agent import WeatherAgent
 
 __all__ = [
     "TravelConcierge",
@@ -23,4 +25,5 @@ __all__ = [
     "AttractionAgent",
     "ItineraryAgent",
         "RestaurantAgent",
+        "WeatherAgent",
 ]
