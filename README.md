@@ -12,6 +12,7 @@ A modern repository for developing and deploying AI agents using Google's Gemini
 - ⚡ **Gemini Integration** - Leverages Google's Gemini API for state-of-the-art natural language understanding
 - 🔧 **Modular Architecture** - Clean, extensible codebase designed for rapid development
 - 🚀 **Production Ready** - Built with best practices for scalability and reliability
+- ✈️ **SmartTravel AI** - Multi-agent travel concierge for comprehensive travel planning
 
 ---
 
@@ -67,13 +68,27 @@ python my_agent/agent.py
 
 ```
 AI-agents/
-├── my_agent/           # Core agent implementation
-│   ├── agent.py       # Main agent logic
-│   ├── .env          # Environment configuration (not tracked)
+├── my_agent/              # Core agent implementation
+│   ├── agent.py           # Main agent logic
+│   ├── .env               # Environment configuration (not tracked)
 │   └── __init__.py
-├── .gitignore         # Git ignore rules
-├── README.md          # This file
-└── requirements.txt   # Python dependencies
+├── smarttravel/           # Multi-agent travel planning system
+│   ├── agents/            # Specialized travel agents
+│   │   ├── concierge.py   # Main orchestration agent
+│   │   ├── flight_agent.py
+│   │   ├── hotel_agent.py
+│   │   ├── attraction_agent.py
+│   │   └── itinerary_agent.py
+│   ├── tests/             # Test suite
+│   └── config.py          # Configuration management
+├── .editorconfig          # Editor configuration
+├── .gitignore             # Git ignore rules
+├── CODE_OF_CONDUCT.md     # Community guidelines
+├── CONTRIBUTING.md        # Contribution guidelines
+├── LICENSE                # MIT License
+├── README.md              # This file
+├── pyproject.toml         # Python package configuration
+└── requirements.txt       # Python dependencies
 ```
 
 ---
@@ -90,7 +105,7 @@ AI-agents/
 
 ### Contributing
 
-Contributions are welcome! Please follow these steps:
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before getting started.
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)

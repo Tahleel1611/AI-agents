@@ -1,0 +1,84 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-agents"
+version = "1.0.0"
+description = "Building intelligent, autonomous agents powered by cutting-edge AI models"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Tahleel1611", email = "tahleel1611@users.noreply.github.com"}
+]
+keywords = ["ai", "agents", "gemini", "automation", "travel"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.12"
+dependencies = [
+    "google-generativeai>=0.3.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.4.0",
+    "isort>=5.12.0",
+]
+# SmartTravel dependencies - see smarttravel/requirements.txt for standalone installation
+smarttravel = [
+    "aiohttp>=3.8.0",
+    "pydantic>=2.0.0",
+    "requests>=2.31.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Tahleel1611/AI-agents"
+Repository = "https://github.com/Tahleel1611/AI-agents"
+Issues = "https://github.com/Tahleel1611/AI-agents/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["my_agent*", "smarttravel*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+    \.git
+    | \.venv
+    | __pycache__
+    | build
+    | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["smarttravel/tests", "my_agent"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"

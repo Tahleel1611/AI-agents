@@ -1,8 +1,5 @@
 # SmartTravel AI - Dependencies
 
-# Core Dependencies
-Python>=3.12
-
 # AI & LLM
 google-generativeai>=0.3.0
 aiohttp>=3.8.0
