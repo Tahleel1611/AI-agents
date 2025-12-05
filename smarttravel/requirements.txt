@@ -1,5 +1,4 @@
 # SmartTravel AI - Dependencies
-# Note: Python 3.12+ is required (specified in pyproject.toml)
 
 # AI & LLM
 google-generativeai>=0.3.0
