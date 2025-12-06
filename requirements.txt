@@ -1,12 +1,25 @@
-# AI-Agents - Core Dependencies
+# AI-Agents - Dependencies
+# Core AI/ML Framework
 
-# Google AI
-google-generativeai>=0.3.0
+# Google Gemini AI
+google-generativeai==0.3.0
 
 # Environment and Configuration
-python-dotenv>=1.0.0
+python-dotenv==1.0.0
 
-# Development
-pytest>=7.4.0
-black>=23.0.0
-flake8>=6.0.0
+# Development and Testing
+pytest==7.4.0
+pytest-cov==4.1.0
+pytest-asyncio==0.21.1
+
+# Code Quality
+black==23.0.0
+flake8==6.0.0
+ruff==0.1.0
+mypy==1.7.0
+
+# Type Checking
+types-requests==2.31.0
+
+# Utilities
+requests==2.31.0
