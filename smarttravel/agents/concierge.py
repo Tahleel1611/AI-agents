@@ -13,6 +13,7 @@ from .hotel_agent import HotelAgent
 from .attraction_agent import AttractionAgent
 from .itinerary_agent import ItineraryAgent
 from .weather_agent import WeatherAgent
+from .disruption_agent import DisruptionAgent
 
 
 logger = logging.getLogger(__name__)
@@ -62,6 +63,7 @@ class TravelConcierge:
         self.hotel_agent = HotelAgent(config)
         self.attraction_agent = AttractionAgent(config)
         self.itinerary_agent = ItineraryAgent(config)
+                self.disruption_agent = DisruptionAgent(config)
         
         logger.info("TravelConcierge initialized with all agents")
     
@@ -198,5 +200,6 @@ class TravelConcierge:
                 "hotel": self.hotel_agent.get_status(),
                 "attraction": self.attraction_agent.get_status(),
                 "itinerary": self.itinerary_agent.get_status()
+                                "disruption": self.disruption_agent.get_status()
             }
         }
