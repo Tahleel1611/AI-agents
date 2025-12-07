@@ -13,6 +13,7 @@ SmartTravel AI is an advanced AI-powered travel planning system that leverages m
 - **Attraction Discovery**: Finds local attractions and activities
 - **Budget Optimization**: Helps plan within budget constraints
 - **Gemini AI Integration**: Uses advanced language models for recommendations
+- - **Disruption Monitoring**: Detects travel disruptions and generates revised plans
 
 ## Project Structure
 
@@ -27,6 +28,7 @@ smart travel/
 │   ├── hotel_agent.py      # Accommodation agent
 │   ├── attraction_agent.py # Local attractions agent
 │   └── itinerary_agent.py  # Itinerary planning agent
+│   ├── disruption_agent.py # Disruption monitoring agent
 ├── utils/                   # Utility functions
 │   └── helpers.py
 ├── tests/                   # Test suite
