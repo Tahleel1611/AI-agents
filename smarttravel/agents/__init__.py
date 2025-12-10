@@ -10,6 +10,7 @@ This package contains various specialized agents for travel planning:
 - WeatherAgent: Weather forecasts and climate insights
 - DisruptionAgent: Travel disruption monitoring and replanning
 - BudgetOptimizerAgent: Budget optimization and value analysis
+- CurrencyConverterAgent: Multi-currency conversion and budgeting
 """
 
 from .concierge import TravelConcierge
@@ -21,6 +22,7 @@ from .restaurant_agent import RestaurantAgent
 from .weather_agent import WeatherAgent
 from .disruption_agent import DisruptionAgent
 from .budget_optimizer_agent import BudgetOptimizerAgent
+from .currency_converter_agent import CurrencyConverterAgent
 
 __all__ = [
     "TravelConcierge",
@@ -32,4 +34,5 @@ __all__ = [
         "WeatherAgent",
         "DisruptionAgent",
         "BudgetOptimizerAgent",
+        "CurrencyConverterAgent",
 ]
