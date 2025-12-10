@@ -15,6 +15,7 @@ A modern repository for developing and deploying AI agents using Google's Gemini
 - 🗺️ **Itinerary Agent**: Crafts day-by-day plans with attractions, restaurants, and hotels  
 - 💰 **Budget Optimizer**: Balances costs across accommodation, food, and activities
 - ✈️ **Flight Agent**: Finds best travel options within your budget
+- - 💱 **Currency Converter**: Handles multi-currency conversions and budgeting for international trips
 
 ### Architecture
 
@@ -43,6 +44,7 @@ Multi-agent travel planning system with specialized agents:
 - `agents/attraction_agent.py` - Tourist attraction curation
 - `agents/budget_optimizer_agent.py` - Cost optimization across trip components
 - `agents/disruption_agent.py` - Handles travel disruptions and rescheduling
+- - `agents/currency_converter_agent.py` - Multi-currency conversion and budgeting
 - `concierge.py` - Orchestrates all agents for unified travel planning
 
 ### `weather_agent/`
