@@ -148,6 +148,26 @@ cd my_agent && python agent.py
 cd weather_agent && python weather_agent.py
 ```
 
+### Run Web UI (Streamlit)
+
+Launch the user-friendly web interface for visual trip planning:
+
+```bash
+streamlit run app.py
+```
+
+This will open the Streamlit web UI in your browser at `http://localhost:8501`. Use the sidebar form to input your trip details and get instant itineraries!
+
+**Note:** Make sure the FastAPI backend is running first:
+
+```bash
+python api.py
+# Or:
+uvicorn api:app --reload
+```
+
+The web UI communicates with the API running on `http://localhost:8000`.
+
 ---
 
 ## 🛠️ Makefile Commands
